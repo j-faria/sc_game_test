@@ -1,62 +1,31 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Add a star to SWEET-Cat
+description: Add a new planet-hosting star to the SWEET-Cat catalogue
+title: "Add [star] to the catalogue"
+labels: ["addition"]
 assignees:
-  - octocat
+  - j-faria
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Here's a new planet-host star to be added to SWEET-Cat
   - type: input
-    id: contact
+    id: star_name
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Star Name
+      description: What is the name (identifier) of the star?
+      placeholder: ex. HD12345
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+
   - type: checkboxes
-    id: terms
+    id: todo
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: ToDo
+      description: |
+        The following steps are necessary to add a star to SWEET-Cat. Please check the completed ones
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: This star is a planet host
+          required: true
+        - label: The planet(s) were detected with the Radial Velocity or Transit methods
           required: true
